@@ -1,0 +1,214 @@
+INFO - 2024-06-10 20:55:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-10 20:55:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-10 21:07:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-10 21:08:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-10 21:09:26 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\serviceapartment\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\laragon\www\serviceapartment\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\laragon\www\serviceapartment\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\serviceapartment\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\serviceapartment\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fo...', Array, false)
+#4 C:\laragon\www\serviceapartment\system\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\serviceapartment\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\serviceapartment\system\Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\serviceapartment\app\Controllers\Contact.php(33): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\serviceapartment\system\CodeIgniter.php(933): App\Controllers\Contact->submit()
+#9 C:\laragon\www\serviceapartment\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+#10 C:\laragon\www\serviceapartment\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\serviceapartment\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\serviceapartment\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\serviceapartment\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\serviceapartment\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\laragon\www\serviceapartment\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\serviceapartment\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\serviceapartment\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fo...', Array, false)
+#3 C:\laragon\www\serviceapartment\system\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#4 C:\laragon\www\serviceapartment\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#5 C:\laragon\www\serviceapartment\system\Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#6 C:\laragon\www\serviceapartment\app\Controllers\Contact.php(33): CodeIgniter\Model->insert(Array)
+#7 C:\laragon\www\serviceapartment\system\CodeIgniter.php(933): App\Controllers\Contact->submit()
+#8 C:\laragon\www\serviceapartment\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+#9 C:\laragon\www\serviceapartment\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\serviceapartment\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\serviceapartment\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\serviceapartment\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-06-10 21:09:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: submit]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `form` (`firstname`, `lastname`, `email`, `message`) VALUES (:firstname:, :lastname:, :email:, :message:)', [...], false)
+ 3 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 6 APPPATH\Controllers\Contact.php(33): CodeIgniter\Model->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Contact->submit()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-06-10 21:10:13 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\serviceapartment\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\laragon\www\serviceapartment\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', '', '', 'serviceapartmen...', 3306, '', 0)
+#1 C:\laragon\www\serviceapartment\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\serviceapartment\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\serviceapartment\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fo...', Array, false)
+#4 C:\laragon\www\serviceapartment\system\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\serviceapartment\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\serviceapartment\system\Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\serviceapartment\app\Controllers\Contact.php(33): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\serviceapartment\system\CodeIgniter.php(933): App\Controllers\Contact->submit()
+#9 C:\laragon\www\serviceapartment\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+#10 C:\laragon\www\serviceapartment\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\serviceapartment\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\serviceapartment\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\serviceapartment\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\serviceapartment\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\laragon\www\serviceapartment\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\serviceapartment\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\serviceapartment\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fo...', Array, false)
+#3 C:\laragon\www\serviceapartment\system\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#4 C:\laragon\www\serviceapartment\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#5 C:\laragon\www\serviceapartment\system\Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#6 C:\laragon\www\serviceapartment\app\Controllers\Contact.php(33): CodeIgniter\Model->insert(Array)
+#7 C:\laragon\www\serviceapartment\system\CodeIgniter.php(933): App\Controllers\Contact->submit()
+#8 C:\laragon\www\serviceapartment\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+#9 C:\laragon\www\serviceapartment\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\serviceapartment\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\serviceapartment\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\serviceapartment\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-06-10 21:10:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: submit]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `form` (`firstname`, `lastname`, `email`, `message`) VALUES (:firstname:, :lastname:, :email:, :message:)', [...], false)
+ 3 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 6 APPPATH\Controllers\Contact.php(33): CodeIgniter\Model->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Contact->submit()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-06-10 21:10:21 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\serviceapartment\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\laragon\www\serviceapartment\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', '', '', 'serviceapartmen...', 3306, '', 0)
+#1 C:\laragon\www\serviceapartment\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\serviceapartment\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\serviceapartment\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fo...', Array, false)
+#4 C:\laragon\www\serviceapartment\system\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\serviceapartment\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\serviceapartment\system\Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\serviceapartment\app\Controllers\Contact.php(33): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\serviceapartment\system\CodeIgniter.php(933): App\Controllers\Contact->submit()
+#9 C:\laragon\www\serviceapartment\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+#10 C:\laragon\www\serviceapartment\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\serviceapartment\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\serviceapartment\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\serviceapartment\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\serviceapartment\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\laragon\www\serviceapartment\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\serviceapartment\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\serviceapartment\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fo...', Array, false)
+#3 C:\laragon\www\serviceapartment\system\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#4 C:\laragon\www\serviceapartment\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#5 C:\laragon\www\serviceapartment\system\Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#6 C:\laragon\www\serviceapartment\app\Controllers\Contact.php(33): CodeIgniter\Model->insert(Array)
+#7 C:\laragon\www\serviceapartment\system\CodeIgniter.php(933): App\Controllers\Contact->submit()
+#8 C:\laragon\www\serviceapartment\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+#9 C:\laragon\www\serviceapartment\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\serviceapartment\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\serviceapartment\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\serviceapartment\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-06-10 21:10:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: submit]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `form` (`firstname`, `lastname`, `email`, `message`) VALUES (:firstname:, :lastname:, :email:, :message:)', [...], false)
+ 3 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 6 APPPATH\Controllers\Contact.php(33): CodeIgniter\Model->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Contact->submit()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-10 21:10:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-10 21:10:42 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\serviceapartment\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\laragon\www\serviceapartment\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', '', '', 'serviceapartmen...', 3306, '', 0)
+#1 C:\laragon\www\serviceapartment\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\serviceapartment\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\serviceapartment\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fo...', Array, false)
+#4 C:\laragon\www\serviceapartment\system\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\serviceapartment\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\serviceapartment\system\Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\serviceapartment\app\Controllers\Contact.php(33): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\serviceapartment\system\CodeIgniter.php(933): App\Controllers\Contact->submit()
+#9 C:\laragon\www\serviceapartment\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+#10 C:\laragon\www\serviceapartment\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\serviceapartment\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\serviceapartment\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\serviceapartment\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\laragon\www\serviceapartment\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\laragon\www\serviceapartment\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\serviceapartment\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\serviceapartment\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fo...', Array, false)
+#3 C:\laragon\www\serviceapartment\system\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#4 C:\laragon\www\serviceapartment\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#5 C:\laragon\www\serviceapartment\system\Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#6 C:\laragon\www\serviceapartment\app\Controllers\Contact.php(33): CodeIgniter\Model->insert(Array)
+#7 C:\laragon\www\serviceapartment\system\CodeIgniter.php(933): App\Controllers\Contact->submit()
+#8 C:\laragon\www\serviceapartment\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+#9 C:\laragon\www\serviceapartment\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\serviceapartment\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\serviceapartment\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\serviceapartment\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-06-10 21:10:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: submit]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `form` (`firstname`, `lastname`, `email`, `message`) VALUES (:firstname:, :lastname:, :email:, :message:)', [...], false)
+ 3 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 6 APPPATH\Controllers\Contact.php(33): CodeIgniter\Model->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Contact->submit()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contact))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-10 21:11:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-10 21:11:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-10 21:12:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-10 21:17:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-10 21:19:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-10 21:26:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-10 21:33:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-10 21:58:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-10 22:00:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -1,0 +1,138 @@
+/* Floor Plan */
+.floor-plan {
+    border: 2px dotted #333 !important;
+    border-radius: 8px !important;
+    text-align: center !important;
+    padding: 20px 30px !important;
+    /* width: 80%; */
+}
+
+/* Rooms */
+.room {
+    position: relative !important;
+    display: inline-block !important;
+    border: 2px dotted #676569 !important;
+    margin: 10px !important;
+    border-radius: 4px !important;
+    width: 220px !important;
+    height: auto !important;
+    padding: 10px !important;
+}
+
+.room:hover {
+    border: 2px dotted #5e55df !important;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) !important;
+}
+
+/* Bed */
+/* .bed {
+    width: 80px !important;
+    height: 40px !important;
+    background-color: red !important;
+    position: absolute !important;
+    border-radius: 4px !important;
+} */
+
+.bed.top-left {
+    top: 20px !important;
+    left: 20px !important;
+}
+
+.bed.bottom-right {
+    bottom: 20px !important;
+    right: 20px !important;
+}
+
+/* Pillow */
+.pillow {
+    width: 80px !important;
+    height: 40px !important;
+    background-color: #ccc !important;
+    position: absolute !important;
+    top: 0px !important;
+    left: 10px !important;
+    border-radius: 3px !important;
+}
+
+/* Checkbox Container */
+.checkbox-container {
+    position: absolute !important;
+    bottom: 5px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+}
+
+.checkbox-label {
+    display: block !important;
+    margin-bottom: 5px !important;
+}
+
+/* Checkbox Styling */
+.checkbox-wrapper:hover .check {
+    stroke-dashoffset: 0 !important;
+}
+
+.checkbox-wrapper {
+    position: relative !important;
+    display: inline-block !important;
+    margin-top: 30px !important;
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.checkbox-wrapper .background {
+    fill: rgb(75, 50, 121) !important;
+    transition: ease all 0.6s !important;
+    -webkit-transition: ease all 0.6s !important;
+}
+
+.checkbox-wrapper .stroke {
+    fill: none !important;
+    stroke: #fff !important;
+    stroke-miterlimit: 10 !important;
+    stroke-width: 2px !important;
+    stroke-dashoffset: 100 !important;
+    stroke-dasharray: 100 !important;
+    transition: ease all 0.6s !important;
+    -webkit-transition: ease all 0.6s !important;
+}
+
+.checkbox-wrapper .check {
+    fill: none !important;
+    stroke: #fff !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    stroke-width: 2px !important;
+    stroke-dashoffset: 22 !important;
+    stroke-dasharray: 22 !important;
+    transition: ease all 0.6s !important;
+    -webkit-transition: ease all 0.6s !important;
+}
+
+.checkbox-wrapper input[type=checkbox] {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    left: 0 !important;
+    top: 0 !important;
+    margin: 0 !important;
+    opacity: 0 !important;
+    -appearance: none !important;
+    -webkit-appearance: none !important;
+}
+
+.checkbox-wrapper input[type=checkbox]:hover {
+    cursor: pointer !important;
+}
+
+.checkbox-wrapper input[type=checkbox]:checked+svg .background {
+    fill: #421c64 !important;
+}
+
+.checkbox-wrapper input[type=checkbox]:checked+svg .stroke {
+    stroke-dashoffset: 0 !important;
+}
+
+.checkbox-wrapper input[type=checkbox]:checked+svg .check {
+    stroke-dashoffset: 0 !important;
+}
